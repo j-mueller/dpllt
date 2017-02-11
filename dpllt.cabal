@@ -1,0 +1,28 @@
+name:                dpllt
+version:             0.0.0.1
+synopsis:            DPLL with Theories
+license:             BSD3
+license-file:        LICENSE
+author:              Jann Müller
+maintainer:          j.mueller.11@ucl.ac.uk
+copyright:           Copyright (C) 2017 Jann Müller
+category:            Data
+build-type:          Simple
+cabal-version:       >= 1.10
+homepage:            https://github.com/j-mueller/dpllt
+bug-reports:         https://github.com/j-mueller/dpllt/issues
+synopsis:            DPLL(T) solver
+description:         An implementation of the DPLLT algorithm
+  
+source-repository head
+  type: git
+  location: git@github.com:j-mueller/dpllt.git
+
+library
+  exposed-modules:     DPLLT.Core,
+                       DPLLT.Theory
+  build-depends:       base >=4.6 && <5,
+                       containers,
+                       logict
+  hs-source-dirs:      src
+  default-language:    Haskell2010
